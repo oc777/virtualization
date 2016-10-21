@@ -41,7 +41,7 @@ gem install bundler --no-ri --no-rdoc #> /dev/null 2>&1
 
 #install NodeJS
 echo "installing NodeJS..."
-#curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash - > /dev/null 2>&1
+curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash - #> /dev/null 2>&1
 sudo apt-get install -y nodejs #> /dev/null 2>&1
 
 echo "installing npm..."
