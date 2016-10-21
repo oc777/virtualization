@@ -47,3 +47,8 @@ sudo apt-get install -y nodejs > /dev/null 2>&1
 #install rails
 echo "install rails"
 gem install rails -v 4.2.6 --no-ri --no-rdoc > /dev/null 2>&1
+
+
+echo "all installed"
+touch /etc/done
+
