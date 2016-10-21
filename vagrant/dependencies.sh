@@ -3,7 +3,7 @@
 #https://gorails.com/setup/ubuntu/14.04
 
 #ruby_v=$(cat ./ruby-v.txt)
-ruby_v=2.3.0
+ruby_v=2.3.1
 echo "Setting up rvm and ruby $ruby_v"
 
 #install some dependencies for Ruby
@@ -62,5 +62,5 @@ sudo apt-get install libqt4-dev libqtwebkit-dev
 
 
 echo "all installed"
-touch /etc/dependencies-done
+#touch /etc/dependencies-done
 
