@@ -58,7 +58,7 @@ sudo apt-get -y install postgresql postgresql-contrib
 
 #install Qt
 echo "install Qt"
-sudo apt-get install libqt4-dev libqtwebkit-dev
+sudo apt-get -y install libqt4-dev libqtwebkit-dev
 
 #memcached
 #apt-get -y install php5-memcache memcached
