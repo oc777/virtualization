@@ -16,10 +16,10 @@ sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libread
 
 #Install RVM:
 echo "install rvm"
-gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 > /dev/null 2>&1
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 # > /dev/null 2>&1
 
 
-curl -sSL https://get.rvm.io | bash -s stable > /dev/null 2>&1
+curl -sSL https://get.rvm.io | bash -s stable #> /dev/null 2>&1
 
 #load RVM
 source ~/.rvm/scripts/rvm
@@ -27,9 +27,9 @@ source ~/.rvm/scripts/rvm
 
 #install ruby
 echo "install ruby"
-rvm install $ruby_v > /dev/null 2>&1
+rvm install $ruby_v #> /dev/null 2>&1
 
-rvm use $ruby_v --default > /dev/null 2>&1
+rvm use $ruby_v --default #> /dev/null 2>&1
 
 
 #install bundler & rails
@@ -37,24 +37,24 @@ rvm use $ruby_v --default > /dev/null 2>&1
 
 #install Bundler
 echo "install bundler"
-gem install bundler --no-ri --no-rdoc > /dev/null 2>&1
+gem install bundler --no-ri --no-rdoc #> /dev/null 2>&1
 
 #install NodeJS
 echo "installing NodeJS..."
 #curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash - > /dev/null 2>&1
-sudo apt-get install -y nodejs > /dev/null 2>&1
+sudo apt-get install -y nodejs #> /dev/null 2>&1
 
 echo "installing npm..."
-sudo apt-get install -y npm > /dev/null 2>&1
+sudo apt-get install -y npm #> /dev/null 2>&1
 
 #install rails
 echo "install rails"
-gem install rails -v 4.2.6 --no-ri --no-rdoc > /dev/null 2>&1
+gem install rails -v 4.2.6 --no-ri --no-rdoc #> /dev/null 2>&1
 
 
 #instal PostgreSQL
 echo "install PostgreSQL"
-sudo apt-get install postgresql postgresql-contrib
+sudo apt-get -y install postgresql postgresql-contrib
 
 #install Qt
 echo "install Qt"
