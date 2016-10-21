@@ -49,6 +49,18 @@ echo "install rails"
 gem install rails -v 4.2.6 --no-ri --no-rdoc > /dev/null 2>&1
 
 
+#instal PostgreSQL
+echo "install PostgreSQL"
+sudo apt-get install postgresql postgresql-contrib
+
+#install Qt
+echo "install Qt"
+sudo apt-get install libqt4-dev libqtwebkit-dev
+
+#memcached
+#apt-get -y install php5-memcache memcached
+
+
 echo "all installed"
 touch /etc/dependencies-done
 
