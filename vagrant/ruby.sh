@@ -37,7 +37,7 @@ rvm use $ruby_v --default > /dev/null 2>&1
 
 #install Bundler
 echo "install bundler"
-gem install bundler > /dev/null 2>&1
+gem install bundler --no-ri --no-rdoc > /dev/null 2>&1
 
 #install NodeJS
 echo "install NodeJS"
