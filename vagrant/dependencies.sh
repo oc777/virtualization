@@ -39,13 +39,20 @@ rvm use $ruby_v --default #> /dev/null 2>&1
 echo "install bundler"
 gem install bundler --no-ri --no-rdoc #> /dev/null 2>&1
 
+
+echo "install nvm"
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
+
+
 #install NodeJS
 echo "installing NodeJS..."
-curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash - #> /dev/null 2>&1
-sudo apt-get install -y nodejs #> /dev/null 2>&1
+nvm install node
+nvm use node
+#curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash - #> /dev/null 2>&1
+#sudo apt-get install -y nodejs #> /dev/null 2>&1
 
-echo "installing npm..."
-sudo apt-get install -y npm #> /dev/null 2>&1
+#echo "installing npm..."
+#sudo apt-get install -y npm #> /dev/null 2>&1
 
 #install rails
 echo "install rails"
