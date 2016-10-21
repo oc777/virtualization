@@ -10,8 +10,10 @@ echo "install dependencies"
 echo "do apt-get update"
 sudo apt-get update > /dev/null 2>&1
 #sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev > /dev/null 2>&1
+
+
 echo "installing git..."
-sudo apt-get install git-all
+sudo apt-get -y install git-all
 
 #For a progress bar when downloading RVM / Rubies:
 #echo progress-bar >> ~/.curlrc
