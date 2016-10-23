@@ -64,8 +64,9 @@ gem install rails -v 4.2.6 --no-ri --no-rdoc #> /dev/null 2>&1
 
 
 #instal PostgreSQL
-echo "install PostgreSQL"
-sudo apt-get -y install postgresql postgresql-contrib
+echo "setting up PostgreSQL"
+#sudo apt-get -y install postgresql postgresql-contrib
+/vagrant/dbstart.sh
 
 #install Qt
 echo "install Qt"
