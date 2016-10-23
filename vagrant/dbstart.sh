@@ -1,5 +1,7 @@
 #!/bin/sh -e
 
+echo "POSTGRES SET UP"
+
 # SOURCE: https://wiki.postgresql.org/wiki/PostgreSQL_For_Development_With_Vagrant#Linux_Installation_2
 # SOURCE: https://github.com/jackdb/pg-app-dev-vm/blob/master/Vagrant-setup/bootstrap.sh
 
