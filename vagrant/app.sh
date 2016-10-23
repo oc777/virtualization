@@ -9,8 +9,9 @@ cd Hours
 
 ./bin/setup
 
+echo "foreman start"
 foreman start
 
 #starting server
-echo "starting server"
-rails s -b 0.0.0.0 -p 3000
+#echo "starting server"
+#rails s -b 0.0.0.0 -p 3000
