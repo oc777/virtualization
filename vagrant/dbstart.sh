@@ -6,7 +6,7 @@ echo "POSTGRES SET UP"
 # SOURCE: https://github.com/jackdb/pg-app-dev-vm/blob/master/Vagrant-setup/bootstrap.sh
 
 # Edit the following to change the name of the database user that will be created:
-APP_DB_USER=hours
+APP_DB_USER=vagrant
 APP_DB_PASS=dbpass
 
 # Edit the following to change the name of the database that is created (defaults to the user name)
