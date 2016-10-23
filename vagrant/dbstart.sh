@@ -42,9 +42,14 @@ print_db_usage () {
   echo "  PGUSER=$APP_DB_USER PGPASSWORD=$APP_DB_PASS psql -h localhost -p 15432 $APP_DB_NAME"
 }
 
+echo "export debian..."
 export DEBIAN_FRONTEND=noninteractive
 
+echo "provisioned-on=...."
+
 PROVISIONED_ON=/etc/vm_provision_on_timestamp
+
+echo "if statement..."
 if [ -f "$PROVISIONED_ON" ]
 then
   echo "VM was already provisioned at: $(cat $PROVISIONED_ON)"
@@ -54,7 +59,11 @@ then
   exit
 fi
 
+
+echo "PG_REPO_APT_SOURCE..."
 PG_REPO_APT_SOURCE=/etc/apt/sources.list.d/pgdg.list
+
+echo "if statement..."
 if [ ! -f "$PG_REPO_APT_SOURCE" ]
 then
   # Add PG apt repo:
