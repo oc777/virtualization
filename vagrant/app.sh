@@ -5,7 +5,7 @@ echo "create hours app"
 cd /vagrant
 
 git clone https://github.com/DefactoSoftware/Hours.git
-cd ./Hours
+cd Hours
 
 ./bin/setup
 
