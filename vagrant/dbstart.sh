@@ -1,5 +1,6 @@
 #!/bin/sh -e
 
+# SOURCE: https://wiki.postgresql.org/wiki/PostgreSQL_For_Development_With_Vagrant#Linux_Installation_2
 # SOURCE: https://github.com/jackdb/pg-app-dev-vm/blob/master/Vagrant-setup/bootstrap.sh
 
 # Edit the following to change the name of the database user that will be created:
