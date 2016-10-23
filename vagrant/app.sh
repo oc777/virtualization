@@ -9,6 +9,7 @@ cd ./Hours
 
 ./bin/setup
 
+foreman start
 
 #starting server
 echo "starting server"
