@@ -72,7 +72,7 @@ cat << EOF | su - postgres -c psql
 
 
 -- Create the database user:
-CREATE USER $APP_DB_USER WITH PASSWORD '$APP_DB_PASS' SUPERUSER CREATEDB;
+CREATE USER $APP_DB_USER WITH PASSWORD '$APP_DB_PASS' SUPERUSER CREATEDB LOGIN;
 EOF
 
 # Tag the provision time:
