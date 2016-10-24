@@ -14,10 +14,6 @@ cd Hours
 echo "run setup"
 ./bin/setup
 
-echo "db migrate"
-#rails db:migrate
-rake db:migrate
-
 echo "foreman start"
 foreman start
 
