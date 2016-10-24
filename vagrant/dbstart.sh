@@ -73,6 +73,14 @@ cat << EOF | su - postgres -c psql
 
 -- Create the database user:
 CREATE USER $APP_DB_USER WITH PASSWORD '$APP_DB_PASS' SUPERUSER CREATEDB;
+EOF
+
+# Tag the provision time:
+date > "$PROVISIONED_ON"
+
+echo "Successfully created PostgreSQL dev virtual machine."
+echo ""
+
 #ALTER USER $APP_DB_USER CREATEDB;
 
 #-- Create the database:
@@ -82,12 +90,4 @@ CREATE USER $APP_DB_USER WITH PASSWORD '$APP_DB_PASS' SUPERUSER CREATEDB;
 #                                  ENCODING='UTF8'
 #                                  TEMPLATE=template0;
 
-
-EOF
-
-# Tag the provision time:
-date > "$PROVISIONED_ON"
-
-echo "Successfully created PostgreSQL dev virtual machine."
-echo ""
 
