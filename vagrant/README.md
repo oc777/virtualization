@@ -2,7 +2,7 @@
 
 ### Vagrant Demo version
 
-Open `Terminal` and navigate to the folder with `Vagrantfile` and scripts.  
-Do ´vagrant up´
-Navigate to localhost:7000 to see the app
+Open `Terminal` and navigate to the folder with `Vagrantfile` and scripts  
+Do `vagrant up`   
+Navigate to `localhost:7000` to see the app
 
