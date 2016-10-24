@@ -15,7 +15,7 @@ echo "run setup"
 ./bin/setup
 
 echo "foreman start"
-echo "port: 7000" > .foreman
+#echo "port: 7000" > .foreman
 foreman start
 
 #starting server
