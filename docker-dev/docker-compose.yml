@@ -1,0 +1,35 @@
+
+version: "2"
+
+services:
+  db:
+    image: postgres:9.4
+    environment:
+      POSTGRES_USER: hours
+      POSTGRES_PASSWORD: hours
+    ports:
+      - "5432:5432"
+    volumes:
+      - backup:/var/lib/postgresql/data
+
+  cache:
+    image: memcached:1.4
+
+  web:
+    build: . #path to the Dockerfile
+    env_file: .env
+    depends_on:
+      - db
+      - cache
+    volumes:
+      - .:/hours
+    ports: 
+      - "8080:8080"
+
+volumes:
+  backup:
+
+
+    
+
+    

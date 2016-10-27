@@ -1,0 +1,60 @@
+I"æ(function() {
+  window.TagExpander = (function() {
+    function TagExpander() {
+      this.all_tags = $('.tag');
+      this.assess_tags();
+      $(window).resize((function(_this) {
+        return function() {
+          return _this.assess_tags();
+        };
+      })(this));
+      $('#more-tags').click((function(_this) {
+        return function() {
+          return _this._show_all();
+        };
+      })(this));
+    }
+
+    TagExpander.prototype.assess_tags = function() {
+      this._show(0);
+      if ($(window).width() >= 1088) {
+        if (this.all_tags.length > 10) {
+          this._show(10);
+          return this._show_more_link(true);
+        } else {
+          return this._show_all();
+        }
+      } else if ($(window).width() >= 640) {
+        if (this.all_tags.length > 5) {
+          this._show(5);
+          return this._show_more_link(true);
+        } else {
+          return this._show_all();
+        }
+      }
+    };
+
+    TagExpander.prototype._show = function(num) {
+      $(".tags-list a").removeClass('show');
+      return $(".tags-list a:lt(" + num + ")").addClass('show');
+    };
+
+    TagExpander.prototype._show_all = function() {
+      this._show(this.all_tags.length);
+      return this._show_more_link(false);
+    };
+
+    TagExpander.prototype._show_more_link = function(show) {
+      if (show) {
+        return $('#more-tags').addClass('show');
+      } else {
+        return $('#more-tags').removeClass('show');
+      }
+    };
+
+    return TagExpander;
+
+  })();
+
+}).call(this);
+:ET

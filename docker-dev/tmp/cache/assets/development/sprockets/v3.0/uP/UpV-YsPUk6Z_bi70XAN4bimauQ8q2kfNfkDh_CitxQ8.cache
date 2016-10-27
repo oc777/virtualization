@@ -1,0 +1,46 @@
+I"Ž(function() {
+  window.DateFormatter = (function() {
+    var MS_PER_DAY;
+
+    MS_PER_DAY = 1000 * 60 * 60 * 24;
+
+    function DateFormatter(date, locale) {
+      this.date = new Date(date);
+      this.locale = I18n[locale || "en"];
+    }
+
+    DateFormatter.prototype.daysAgoInWords = function() {
+      if (this._dateInFuture()) {
+        return "" + (this._days()) + " " + this.locale.date.future;
+      }
+      switch (this._days()) {
+        case 0:
+          return this.locale.date.today;
+        case 1:
+          return this.locale.date.yesterday;
+        default:
+          return "" + (this._days()) + " " + this.locale.date.dateAgo;
+      }
+    };
+
+    DateFormatter.prototype._dateInFuture = function() {
+      return this.date > new Date();
+    };
+
+    DateFormatter.prototype._days = function() {
+      var date, today;
+      today = this._UTCDate(new Date());
+      date = this._UTCDate(this.date);
+      return Math.floor((today - date) / MS_PER_DAY);
+    };
+
+    DateFormatter.prototype._UTCDate = function(date) {
+      return Date.UTC(date.getFullYear(), date.getMonth(), date.getDate());
+    };
+
+    return DateFormatter;
+
+  })();
+
+}).call(this);
+:ET

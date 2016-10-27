@@ -1,0 +1,45 @@
+I"(function() {
+  window.Tagger = (function() {
+    var HASHTAG_REGEXP, SPACE_REGEXP;
+
+    HASHTAG_REGEXP = /#([a-zA-Z0-9]+)/g;
+
+    SPACE_REGEXP = /\s/g;
+
+    function Tagger(element) {
+      this.container = element;
+      this.input = element.find('input');
+      this.input.change((function(_this) {
+        return function() {
+          return _this.highlight();
+        };
+      })(this));
+      this.input.keyup((function(_this) {
+        return function() {
+          return _this.highlight();
+        };
+      })(this));
+      this.highlight();
+    }
+
+    Tagger.prototype.highlight = function() {
+      var text;
+      text = this._pad(this.input.val());
+      text = this._tag(text);
+      return this.container.find(".background-highlighter").html(text);
+    };
+
+    Tagger.prototype._pad = function(text) {
+      return text.replace(SPACE_REGEXP, '&nbsp;');
+    };
+
+    Tagger.prototype._tag = function(text) {
+      return text.replace(HASHTAG_REGEXP, '<span class="hashtag">#$1</span>');
+    };
+
+    return Tagger;
+
+  })();
+
+}).call(this);
+:ET
