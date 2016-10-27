@@ -10,6 +10,6 @@
 #/log/*
 #/public/system
 #/tags
-#/tmp/*
+/tmp/*
 #/config/database.yml
-readme
+/vendor/assets
