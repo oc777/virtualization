@@ -7,5 +7,5 @@ Do `vagrant up`
 Navigate to `localhost:7000` to see the app
 
 Login with:  
-email      test@yopmail.com   
-password   test1234
+email      `test@yopmail.com`   
+password   `test1234` 
