@@ -10,12 +10,14 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - backup:/var/lib/postgresql/data
+      - backupvol:/var/lib/postgresql/data
 
   cache:
     image: memcached:1.4
+    volumes:
+      - cachevol:/var/lib/redis/data
 
-  web:
+  app:
     build: . #path to the Dockerfile
     env_file: .env
     depends_on:
@@ -24,10 +26,11 @@ services:
     volumes:
       - .:/hours
     ports: 
-      - "8080:8080"
+      - "8080:7000"
 
 volumes:
-  backup:
+  backupvol:
+  cachevol:
 
 
     

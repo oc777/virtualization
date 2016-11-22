@@ -28,9 +28,6 @@ RUN bundle install
 # over to the working directory.
 COPY . .
 
-#RUN bundle exec rake db:create db:migrate
-#RUN bundle exec rake db:setup
-RUN foreman start 
 
 # The default command that gets ran will be to start the Unicorn server.
-#CMD bundle exec unicorn -c ./config/unicorn.rb
+CMD bundle exec unicorn -p 7000 -c ./config/unicorn.rb
