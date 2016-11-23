@@ -1,5 +1,4 @@
 .git
 .dockerignore
-/log/*
-/tmp/*
-#*/secrets.yml
+app/log/*
+app/tmp/*

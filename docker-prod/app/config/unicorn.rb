@@ -4,7 +4,11 @@ worker_processes (ENV['WEB_CONCURRENCY'] || 3).to_i
 timeout (ENV['WEB_TIMEOUT'] || 120).to_i
 preload_app true
 
-#listen "/tmp/unicorn.hrs.sock", :backlog => 64
+#working_directory "/hours"
+#listen "/tmp/unicorn.sock", :backlog => 64
+
+#stderr_path "/log/unicorn.stderr.log"
+#stdout_path "/log/unicorn.stdout.log"
 
 before_fork do |server, worker|
   Signal.trap 'TERM' do
