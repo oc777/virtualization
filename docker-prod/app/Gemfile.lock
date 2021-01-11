@@ -253,7 +253,7 @@ GEM
     rake (11.2.2)
     recipient_interceptor (0.1.2)
       mail
-    redcarpet (3.2.2)
+    redcarpet (3.5.1)
     redis (3.3.1)
     redis-actionpack (4.0.1)
       actionpack (~> 4)
